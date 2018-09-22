@@ -63,6 +63,7 @@ header {
 	height: 70px;
 	align-items: center;
 	justify-content: flex-start;
+	cursor: pointer;
 }
 
 .header-menu .link {
@@ -84,7 +85,8 @@ header {
 }
 
 .hero .bg-overlay {
-	background: rgba(114, 114, 114, 0.3);
+	/* background: rgba(114, 114, 114, 0.3); */
+	background: rgba(59, 88, 184, .3);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -113,6 +115,7 @@ header {
 
 .link:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 /* Button Styles */
@@ -147,6 +150,20 @@ header {
 	box-shadow: 0px 0px 0px 2px rgba(241, 104, 118, 1) inset;
 }
 
+label {
+	display: block;
+	margin-bottom: 5px;
+	width: 300px;
+}
+
+.form-input {
+	background: #fff;
+	font-size: 16px;
+	border: none;
+	padding: 10px 25px;
+	width: 300px;
+	margin-bottom: 10px;
+}
 
 .container {
 	padding: 0 15px;
@@ -179,7 +196,7 @@ header {
 .content h3 {
 	text-transform: uppercase;
 	font-weight: 300;
-	font-size: 24px;
+	font-size: 30px;
 	letter-spacing: 2px;
 	margin-bottom: 40px;
 }
@@ -191,8 +208,10 @@ header {
 }
 
 .team {
-	background:#000 url('./images/concrete-texture.png') repeat;
+	background: rgb(59, 88, 184, .5);
+	/* background:#000 url('./images/concrete-texture.png') repeat; */
 	/* background-size: cover; */
+	position: relative;
 }
 
 .team .bg-overlay {
@@ -233,14 +252,58 @@ header {
 	border-radius: 100px; 
 	position: absolute;
 	left: 0;
+	border: 3px solid rgba(241, 104, 118, 1);
 }
 
 .team .other-circle {
 	width: 150px;
 	height: 150px;
-	background: url('./images/ruben.jpg') no-repeat;
+	background: url('./images/other-circle.svg') no-repeat;
 	background-size: cover;
 	border-radius: 100px;
 	position: absolute;
 	right: 0;
+	border: 3px solid rgba(241, 104, 118, 1);
+}
+
+.clients .graphic img {
+	width: 100px;
+}
+
+.clients .content {
+	width: 100%;
+}
+
+.clients .content .button {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.clients .client-images {
+	display: flex;
+	justify-content: space-evenly;
+	/* margin-bottom: 60px; */
+}
+
+.clients .client-images img {
+	width: 150px;
+}
+
+.contactus {
+	background: rgb(59, 88, 184, .1);
+	text-align: center;
+}
+
+.contactus .content {
+	width: 100%;
+}
+
+footer {
+	font-family: Helvetica, sans-serif;
+	background: #efefef;
+	padding: 20px;
+	text-align: center;
+	border-top: 1px solid #ddd;
+	font-size: 12px;
+	color: #666;
 }

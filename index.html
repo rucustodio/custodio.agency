@@ -5,6 +5,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,800" rel="stylesheet">
 
 		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 	</head>
 
 	<body>
@@ -15,10 +16,10 @@
 						<span class="bold">CUSTODIO</span><span class="thin">AGENCY</span>
 					</div>
 					<div class="header-menu">
-						<a class="link" href="/">services</a>
-						<a class="link" href="/">team</a>
-						<a class="link" href="/">clients</a>
-						<a class="button-sm" href="/">contact us</a>
+						<span class="link" href="/" data-class="services">services</span>
+						<span class="link" href="/" data-class="team">team</span>
+						<span class="link" href="/" data-class="clients">clients</span>
+						<a class="button-sm" href="mailto:ruben@custodio.agency" target="_blank">contact us</a>
 					</div>
 				</div>
 			</header>
@@ -61,18 +62,56 @@
 
 			<div class="clients">
 				<div class="container">
-					<div class="graphic">
-						<img src="./images/rotary.png" />
-						<img src="./images/launchmaps.png" />
-						<img src="./images/whitstik.png" />
-					</div>
+					<!-- <div class="graphic">
+						
+					</div> -->
 					<div class="content">
 							<h3>Our Clients</h3>
-							<p>We have a number of different types of clients that we will service, but we specialize in small businesses and organizations.</p>
-							<a href="/" class="button">Learn more</a>
+							<!-- <p>We have a number of different types of clients that we will service, but we specialize in small businesses and organizations.</p> -->
+							<div class="client-images">
+								<img src="./images/rotary.svg" />
+								<img src="./images/launchmaps.svg" />
+								<img src="./images/whitstik.svg" />
+								<img src="./images/chefcandice.svg" />
+							</div>
+							<!-- <a href="/" class="button">Learn more</a> -->
 					</div>
 				</div>
 			</div>
+
+			<div class="contactus">
+					<div class="container">
+						<div class="content">
+								<h3>Let's talk! </h3>
+								<p>Help us, help you! Shoot us a message and we can build something great for your needs.</p>
+								<a href="mailto:ruben@custodio.agency" class="button" target="_blank">ruben@custodio.agency</a>
+								<a href="tel:781-561-0399" class="button" target="_blank">781.561.0399</a>
+						</div>
+					</div>
+				</div>
 		</div>
+		<footer>
+			&copy; <span class="current-year"></span> Custodio Agency. All rights reserved.
+		</footer>
+
+		<script>
+			const today = new Date(),
+						links = document.querySelectorAll('.header-menu .link'),
+						scroll = new SmoothScroll();
+			
+			document.querySelector('.current-year').textContent = today.getFullYear();
+			links.forEach(link => {
+				const section = link.getAttribute('data-class');
+				const top = document.querySelector(`.${section}`).getBoundingClientRect().top;
+
+				link.onclick = () => {
+					scroll.animateScroll(top);
+				}
+			});
+
+			document.querySelector('.header-logo').onclick = () => {
+				scroll.animateScroll(0)
+			}
+		</script>
 	</body>
 </html>
