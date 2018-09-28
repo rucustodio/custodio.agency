@@ -266,9 +266,9 @@ label {
 	background-size: cover;
 	border-radius: 200px;
 	position: absolute;
-	left: 0;
+	
 	right: 0;
-	margin: auto;
+	
 	z-index: 10;
 	border: 5px solid white;
 }
