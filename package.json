@@ -1,0 +1,29 @@
+{
+  "name": "custodio.agency",
+  "version": "1.0.0",
+  "description": "Custodio Agency website",
+  "main": "script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rucustodio/custodio.agency.git"
+  },
+  "keywords": [
+    "custodio",
+    "agency"
+  ],
+  "author": "Ruben Custodio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rucustodio/custodio.agency/issues"
+  },
+  "homepage": "https://github.com/rucustodio/custodio.agency#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

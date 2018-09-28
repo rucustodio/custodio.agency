@@ -59,7 +59,7 @@ header {
 .header-logo {
 	font-size: 18px;
 	display: flex;
-	width: 300px;
+	width: 200px;
 	height: 70px;
 	align-items: center;
 	justify-content: flex-start;
@@ -74,6 +74,16 @@ header {
 	margin-left: 10px;
 }
 
+.header-menu .link {
+	display: none;
+}
+
+@media (min-width: 840px) { 
+		.header-menu .link {
+			display: inline-block;
+		}
+ }
+
 .hero {
 	height: 700px;
 	background: url('./images/desk-4.jpg') no-repeat center center;
@@ -85,7 +95,8 @@ header {
 }
 
 .hero .bg-overlay {
-	/* background: rgba(114, 114, 114, 0.3); */
+	left: 0;
+	top: 0;
 	background: rgba(59, 88, 184, .3);
 	width: 100%;
 	height: 100%;
@@ -185,6 +196,24 @@ label {
 	justify-content: center;
 }
 
+@media (max-width: 839px) {
+	h1 {
+		display: none;
+	}
+
+	.container {
+		justify-content: space-around;
+	}
+
+	.graphic {
+		display: none;
+	}
+
+	.clients h3 {
+		text-align: center;
+	}
+} 
+
 .graphic img {
 	width: 300px;
 }
@@ -208,9 +237,7 @@ label {
 }
 
 .team {
-	background: rgb(59, 88, 184, .5);
-	/* background:#000 url('./images/concrete-texture.png') repeat; */
-	/* background-size: cover; */
+	background: rgba(59, 88, 184, .5);
 	position: relative;
 }
 
@@ -220,6 +247,8 @@ label {
 	height: 100%;
 	position: absolute;
 	z-index: 0;
+	left: 0;
+	top: 0;
 }
 
 .team .container {
@@ -281,8 +310,8 @@ label {
 
 .clients .client-images {
 	display: flex;
-	justify-content: space-evenly;
-	/* margin-bottom: 60px; */
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .clients .client-images img {
@@ -290,8 +319,12 @@ label {
 }
 
 .contactus {
-	background: rgb(59, 88, 184, .1);
+	background: rgba(59, 88, 184, .1);
 	text-align: center;
+}
+
+.contactus .button {
+	margin-bottom: 20px;
 }
 
 .contactus .content {
