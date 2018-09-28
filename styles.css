@@ -298,6 +298,26 @@ label {
 	width: 100%;
 }
 
+.contactus .instagram-paragraph {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: gray;
+	height: 40px;
+	margin-top: 40px;
+}
+
+.contactus .instagram-paragraph a {
+	display: inline-flex;
+	color: gray;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.contactus .instagram-paragraph img {
+	margin-left: 20px;
+}
+
 footer {
 	font-family: Helvetica, sans-serif;
 	background: #efefef;

@@ -29,7 +29,7 @@
 				<div class="hero-title">
 					<h1><span class="bold">CUSTODIO</span><span class="thin">AGENCY</span></h1>
 					<h2>Professional Web Services</h2>
-					<a href="/" class="button">get started</a>
+					<span href="/" class="button hero-button">get started</span>
 				</div>
 			</div>
 			<div class="services">
@@ -40,7 +40,7 @@
 					<div class="content">
 						<h3>Our Services</h3>
 						<p>We offer a range of services including but not limited to web development, app development, UI/UX consulting, social media consulting, photography, videography, and other media services.</p>
-						<a href="/" class="button">learn more</a>
+						<!-- <a href="/" class="button">learn more</a> -->
 					</div>
 				</div>
 			</div>
@@ -55,7 +55,7 @@
 					<div class="content">
 							<h3>Our Team</h3>
 							<p>We're a small group of professionals that just want to help your dream come true.</p>
-							<a href="/" class="button">learn more</a>
+							<a href="https://www.instagram.com/custodio.agency/" class="button">learn about us</a>
 					</div>
 				</div>
 			</div>
@@ -86,6 +86,7 @@
 								<p>Help us, help you! Shoot us a message and we can build something great for your needs.</p>
 								<a href="mailto:ruben@custodio.agency" class="button" target="_blank">ruben@custodio.agency</a>
 								<a href="tel:781-561-0399" class="button" target="_blank">781.561.0399</a>
+								<p class="instagram-paragraph"><a href="https://www.instagram.com/custodio.agency/" target="_blank">Follow us on instagram <img src="./images/instagram.svg" /></a></p>
 						</div>
 					</div>
 				</div>
@@ -95,23 +96,30 @@
 		</footer>
 
 		<script>
-			const today = new Date(),
-						links = document.querySelectorAll('.header-menu .link'),
-						scroll = new SmoothScroll();
-			
-			document.querySelector('.current-year').textContent = today.getFullYear();
-			links.forEach(link => {
-				const section = link.getAttribute('data-class');
-				const top = document.querySelector(`.${section}`).getBoundingClientRect().top;
+			document.addEventListener("DOMContentLoaded", (event) => {
+				const today = new Date(),
+							links = document.querySelectorAll('.header-menu .link'),
+							scroll = new SmoothScroll(),
+							contactTop = document.querySelector(`.clients`).getBoundingClientRect().top + window.scrollY
+				
+				document.querySelector('.current-year').textContent = today.getFullYear();
+				links.forEach(link => {
+					const section = link.getAttribute('data-class');
+					const top = document.querySelector(`.${section}`).getBoundingClientRect().top + window.scrollY;
 
-				link.onclick = () => {
-					scroll.animateScroll(top);
+					link.onclick = () => {
+						scroll.animateScroll(top);
+					}
+				});
+
+				document.querySelector('.header-logo').onclick = () => {
+					scroll.animateScroll(0)
+				}
+
+				document.querySelector('.hero-button').onclick = () => {
+					scroll.animateScroll(contactTop)
 				}
 			});
-
-			document.querySelector('.header-logo').onclick = () => {
-				scroll.animateScroll(0)
-			}
 		</script>
 	</body>
 </html>
